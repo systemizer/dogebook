@@ -7,8 +7,9 @@ $(document).ready(function() {
 			'much joanna', 'such rob'],
     doge_colors = ['#6FFF00','#FF00FF', '#FFFF00','#4D4DFF',
 		   '#FE0001','#FF4105','#993CF3'],
-    body$ = $('body');
-    var elems = [];
+    body$ = $('body'),
+    elems = [],
+    min_elems = 30;
 
     $(window).scroll(function() {
 	// $('.doge-phrase').remove();
@@ -20,6 +21,6 @@ $(document).ready(function() {
 	var elem$ = $('<div class="doge-phrase" style="top: '+top_percentage+'%; left: '+left_percentage+'%; color: '+doge_color+'; font-size:'+font_size+'em;">'+doge_phrase+'</div>');
 	body$.append(elem$);
 	elems.push(elem$);
-	setTimeout(function() {elems[0].remove();elems = elems.splice(1,elems.length)},Math.random()*10000);
+	setTimeout(function() {if (elems.length > min_elems) {elems[0].remove();elems = elems.splice(1,elems.length)}},Math.random()*10000);
     });
 });
