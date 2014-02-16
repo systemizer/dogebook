@@ -24,14 +24,23 @@ def dogify(fb_photos,user):
             returned_images.append(known_images_map[photo['id']])
             continue
 
+
+        #Rotate DOge
+        doge_img_copy = doge_img.copy()
+        doge_img_copy = doge_img_copy.rotate(int(random.random()*45-22.5))
+
+        #Flip Doge
+        if random.random() > .75:
+            doge_img_copy = doge_img_copy.transpose(Image.FLIP_LEFT_RIGHT)
+
         url = photo['picture'].replace("s.jpg","b.jpg")
 
         file = cStringIO.StringIO(urllib.urlopen(url).read())
         background = Image.open(file)
-        doge_img_w,doge_img_h=doge_img.size
+        doge_img_w,doge_img_h=doge_img_copy.size
         bg_w,bg_h=background.size
-        offset=(int((bg_w-doge_img_w)/4 + (bg_w-doge_img_w)/2*random.random()),int((bg_h-doge_img_h)/4 + (bg_h-doge_img_h)/2*random.random()))
-        background.paste(doge_img,offset,doge_img)
+        offset=(int((bg_w-doge_img_w)/8 + (bg_w-doge_img_w)/4*3*random.random()),int((bg_h-doge_img_h)/8 + (bg_h-doge_img_h)/4*3*random.random()))
+        background.paste(doge_img_copy,offset,doge_img_copy)
 
         imagefile = cStringIO.StringIO()
         background.save(imagefile,format="PNG")
