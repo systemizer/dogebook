@@ -95,6 +95,9 @@ LOGIN_URL="/login/facebook/"
 FACEBOOK_EXTENDED_PERMISSIONS = ['user_photos']
 SCOPE = ['user_photos']
 
+PATH_TO_DOGE=os.path.join(BASE_DIR,"doge.png")
+MEDIA_URL="/media/"
+
 try:
     from .local_settings import *
 except ImportError:
