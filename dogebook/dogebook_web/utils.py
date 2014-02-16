@@ -1,4 +1,5 @@
 import os
+import random
 
 import urllib, cStringIO
 import Image
@@ -29,13 +30,16 @@ def dogify(fb_photos,user):
         background = Image.open(file)
         doge_img_w,doge_img_h=doge_img.size
         bg_w,bg_h=background.size
-        offset=((bg_w-doge_img_w)/2,(bg_h-doge_img_h)/2)
+        offset=(int((bg_w-doge_img_w)/4 + (bg_w-doge_img_w)/2*random.random()),int((bg_h-doge_img_h)/4 + (bg_h-doge_img_h)/2*random.random()))
         background.paste(doge_img,offset,doge_img)
 
         imagefile = cStringIO.StringIO()
         background.save(imagefile,format="PNG")
 
-        doge_image = DogeImage(fb_id=photo['id'],owner=user)
+        if photo.get("comments"):
+            comment = photo.get("comments")['data'][0]['message']
+
+        doge_image = DogeImage(fb_id=photo['id'],owner=user,comment=comment)
         doge_image.save()
         doge_image.image.save(
             os.path.basename(url),
