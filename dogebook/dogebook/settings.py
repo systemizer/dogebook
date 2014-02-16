@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
     'dogebook_social',
+    'dogebook_web',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -87,6 +88,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/'
 
 try:
     from .local_settings import *

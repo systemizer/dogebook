@@ -1,5 +1,6 @@
 *pyc
 *~
+*#
 dogebook/dogebook/local_settings.py
 myenv
 dogebook/db.sqlite3
