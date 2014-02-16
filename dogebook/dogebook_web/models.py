@@ -6,3 +6,4 @@ class DogeImage(models.Model):
     fb_id = models.CharField(max_length=127,unique=True)
     owner = models.ForeignKey(User)
     image = models.ImageField(upload_to="dogeimages",blank=True,null=True)
+    comment = models.TextField(null=True,blank=True)
