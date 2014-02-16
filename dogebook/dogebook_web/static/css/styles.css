@@ -1,0 +1,71 @@
+/*
+Neon Green: #6FFF00 
+Neon Pink: #FF00FF 
+Neon Yellow: #FFFF00 
+Neon Blue: #4D4DFF 
+Neon Red: #FE0001 
+Neon Orange: #FF4105 
+Neon Purple: #993CF3 
+*/
+
+
+html, 
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+}
+
+html {
+	background: #1b1b1b;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#header {
+	width: 100%;
+	padding: 0 20px;
+	float: left;
+}
+
+#header h1 {
+	font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+	font-size: 2em;
+	color: #FE0001;
+	background: #1b1b1b;
+	text-align: right;
+	z-index: 10;
+	float: right;
+	padding: 10px;
+	margin: 0;
+}
+
+#content {
+	width: 60%;
+	max-width: 900px;
+	padding: 20px 20px 20px 20px;
+	/*margin: 0 auto;*/
+	float: right;
+}
+
+#content img {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.doge-phrase {
+	position: fixed;
+	font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+	z-index: -1;
+}
+
+#cutout-doge {
+	position: fixed;
+	bottom: 0;
+	left: 10px;
+	width: 45%;
+	z-index: -1;
+}
