@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'social.apps.django_app.default',
     'dogebook_social',
     'dogebook_web',
+    'dogebook_imageprocessing',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -89,6 +90,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL="/login/facebook/"
 
 try:
     from .local_settings import *
