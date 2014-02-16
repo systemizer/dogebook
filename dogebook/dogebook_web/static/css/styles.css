@@ -51,13 +51,22 @@ html {
 	float: right;
 }
 
-#content img {
-	width: 100%;
-	margin: 10px 0;
-	padding:15px;
-	margin:15px;
-	background:#333;
+#content .img-container {
+    width:100%;
+    padding:15px;
+    margin:15px;
+    padding-bottom:5px;
+    background:#333;
+}
 
+#content .img-container img {
+	width: 100%;
+}
+
+#content .img-container p {
+	font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+        color:#FFF;
+	text-align:center;
 }
 
 .doge-phrase {

@@ -2,6 +2,9 @@
 
 {% block content %}
 {% for doge in dogify_images %}
-<img src="{% if doge.image %}{{doge.image.url}}{% endif %}" />
+<div class="img-container">
+  <img src="{% if doge.image %}{{doge.image.url}}{% endif %}" />
+  <p>{{doge.comment}}</p>
+</div>
 {% endfor %}
 {% endblock %}

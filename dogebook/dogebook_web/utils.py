@@ -36,6 +36,7 @@ def dogify(fb_photos,user):
         imagefile = cStringIO.StringIO()
         background.save(imagefile,format="PNG")
 
+        comment = None
         if photo.get("comments"):
             comment = photo.get("comments")['data'][0]['message']
 
