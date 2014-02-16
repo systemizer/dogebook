@@ -69,3 +69,24 @@ html {
 	width: 45%;
 	z-index: -1;
 }
+
+@media (max-width: 620px) {
+	#header {
+		background: #1b1b1b;
+	}
+
+	#header h1 {
+		text-align: center;
+	}
+
+	#content {
+		width: 100%;
+	}
+
+	#cutout-doge {
+		position: relative;
+		float: left;
+		width: 100%;
+		left: auto;
+	}
+}
