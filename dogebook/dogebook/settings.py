@@ -92,6 +92,9 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL="/login/facebook/"
 
+FACEBOOK_EXTENDED_PERMISSIONS = ['user_photos']
+SCOPE = ['user_photos']
+
 try:
     from .local_settings import *
 except ImportError:

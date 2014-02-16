@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-HELLO WORLD
+{% for pic in picture_urls %}
+<img src="{{pic}}" />
+{% endfor %}
 {% endblock %}
