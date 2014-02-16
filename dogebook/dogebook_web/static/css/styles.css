@@ -1,15 +1,15 @@
 /*
-Neon Green: #6FFF00 
-Neon Pink: #FF00FF 
-Neon Yellow: #FFFF00 
-Neon Blue: #4D4DFF 
-Neon Red: #FE0001 
-Neon Orange: #FF4105 
-Neon Purple: #993CF3 
+Neon Green: #6FFF00
+Neon Pink: #FF00FF
+Neon Yellow: #FFFF00
+Neon Blue: #4D4DFF
+Neon Red: #FE0001
+Neon Orange: #FF4105
+Neon Purple: #993CF3
 */
 
 
-html, 
+html,
 body {
 	margin: 0;
 	padding: 0;
@@ -44,7 +44,7 @@ html {
 }
 
 #content {
-	width: 60%;
+	width: 55%;
 	max-width: 900px;
 	padding: 20px 20px 20px 20px;
 	/*margin: 0 auto;*/
@@ -54,6 +54,10 @@ html {
 #content img {
 	width: 100%;
 	margin: 10px 0;
+	padding:15px;
+	margin:15px;
+	background:#333;
+
 }
 
 .doge-phrase {
