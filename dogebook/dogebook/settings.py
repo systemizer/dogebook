@@ -146,6 +146,8 @@ LOGGING = {
     }
 }
 
+CELERY_RESULT_BACKEND='djcelery.backends.cache:CacheBackend'
+
 try:
     from .local_settings import *
 except ImportError:
