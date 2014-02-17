@@ -15,6 +15,10 @@ body {
 	padding: 0;
 	width: 100%;
 	float: left;
+	background-image:url('/static/imgs/doge-moon.png');
+	background-repeat:no-repeat;
+	background-position:right;
+	height:100%;
 }
 
 html {
