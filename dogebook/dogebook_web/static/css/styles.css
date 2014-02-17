@@ -169,6 +169,39 @@ html {
 	color: #555 !important;
 }
 
+.footer {
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+}
+
+.footer.splash {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}
+
+.footer .button {
+	float: left;
+	margin: 0 auto;
+	width: 100%;
+	text-align: right;
+	margin: 3em 0 0 0;
+	color: black;
+}
+
+.footer .button span {
+	background: #993CF3;
+    font-size:0.8em;
+    padding:10px;
+    line-height:1em;
+    cursor:pointer;
+}
+
+.footer .button span:hover {
+    background:#4D4DFF;
+}
+
 
 @media (max-width: 620px) {
 	#header {
@@ -211,5 +244,18 @@ html {
 		margin-bottom: 0.8em;
 		bottom: auto;
 		right: auto;
+	}
+
+	.footer {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		left: auto;
+		width: 100%;
+	}
+
+	.footer .button {
+		text-align: center;
+		margin-bottom: 3em;
 	}
 }
