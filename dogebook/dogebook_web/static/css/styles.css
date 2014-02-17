@@ -23,10 +23,8 @@ body {
   width:100%;
 }
 
-#splash {
-  background-image:url('/static/imgs/doge-moon.png');
-  background-repeat:no-repeat;
-  background-position:right;
+#to-the-moon {
+  float:right;
 }
 
 html {
