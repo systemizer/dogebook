@@ -42,8 +42,9 @@ $(document).ready(function() {
 		$('.ajmint-social-btn[data-type="facebook"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
 			var socialtext = "very photo, much dogebombed";
+			var captiontext = $(this).parent().parent().find('p').text();
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
-			AJMINT.sendFbShare(e, socialtext, imglink);
+			AJMINT.sendFbShare(e, socialtext, imglink, captiontext);
 		});
 
 		$('.ajmint-social-btn[data-type="gplus"]').click(function(e){
@@ -77,12 +78,12 @@ $(document).ready(function() {
 			window.open(twitter_url, 'Tweet', settings)
 			}
 
-		AJMINT.sendFbShare = function(e, text, route){
+		AJMINT.sendFbShare = function(e, text, route, caption){
 			var base_url = 'http://www.facebook.com/sharer.php?s=100',
 			    page_url = '&p[url]=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));
 
 			var name = "&p[title]=dogebomb: much bomb, very doge",
-			    description = "&p[summary]=much bomb, very doge",
+			    description = "&p[summary]=" + caption,
 			    image       = '&p[images][0]=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));;
 
 			var facebook_url = base_url + page_url + name + description + image;
