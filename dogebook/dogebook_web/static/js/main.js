@@ -85,7 +85,7 @@ $(document).ready(function() {
 			var name = "&name=dogebomb: much bomb, very doge",
 			    description = "&description=much bomb, very doge",
 			    redirect    = '&redirect_uri=https://dogebomb.me',
-			    image       = '&picture=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));;
+			    image       = '&picture=' + AJMINT.percentEncode((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));;
 
 			var facebook_url = base_url + app_id + page_url + name + description + redirect + image;
 			    facebook_url = AJMINT.percentEncode(facebook_url);
