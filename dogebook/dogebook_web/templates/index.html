@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% load dogify %}
 
+
 {% block content %}
-{% for doge in dogify_images %}
-<div class="img-container">
-  <img src="{% if doge.image %}{{doge.image.url}}{% endif %}" />
-  <p>{{doge.comment|dogify_comment}}</p>
+<div id="content">
+	{% for doge in dogify_images %}
+	<div class="img-container">
+	  <img src="{% if doge.image %}{{doge.image.url}}{% endif %}" />
+	  <p>{{doge.comment|dogify_comment}}</p>
+	</div>
+	{% endfor %}
 </div>
-{% endfor %}
+<img id="cutout-doge" src="{{STATIC_URL}}imgs/doge-cutout.png" />
 {% endblock %}

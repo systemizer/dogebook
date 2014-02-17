@@ -19,11 +19,8 @@
   	<div id="header">
   		<h1>dogebomb: much bomb, very doge</h1>
   	</div>
-  	<div id="content">
-	    {% block content %}
-	    {% endblock %}
-	</div>
-    <img id="cutout-doge" src="{{STATIC_URL}}imgs/doge-cutout.png" />
+    {% block content %}
+    {% endblock %}
   </body>
 
 </html>
