@@ -8,6 +8,12 @@ Neon Orange: #FF4105
 Neon Purple: #993CF3
 */
 
+@font-face {
+  font-family: 'comic';
+  src: url('font/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body {
@@ -33,7 +39,7 @@ html {
 
 * {
 	box-sizing: border-box;
-	font-family: 'Comic Sans MS', cursive;
+	font-family: 'Comic Sans MS', 'comic', sans-serif;
 }
 
 .button {
