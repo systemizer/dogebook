@@ -67,7 +67,7 @@ $(document).ready(function() {
 			text = (text) ? text : 'very photo, much doge';
 
 			var tweet_text  = "&text=" + text,
-			    via_account = '&via=systemizer @joannaskao',
+			    via_account = '',
 			    related     = "",
 			    counter_url = "&counturl=" + window.location.hostname + window.location.pathname;
 
