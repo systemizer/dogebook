@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="twitter"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "very photo, much doge";
+			var socialtext = "dogebomb: very photo, much doge";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendTweet(e, socialtext, imglink);
 			e.stopPropagation()
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="gplus"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "very photo, much doge";
+			var socialtext = "dogebomb: very photo, much doge";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendGplusShare(e, imglink);
 		});
