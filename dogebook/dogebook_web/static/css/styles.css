@@ -32,7 +32,7 @@ html {
 }
 
 #header h1 {
-	font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+	font-family: 'Comic Sans MS', cursive;
 	font-size: 2em;
 	color: #FE0001;
 	background: #1b1b1b;
@@ -64,14 +64,14 @@ html {
 }
 
 #content .img-container p {
-	font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+	font-family: 'Comic Sans MS', cursive;
         color:#FFF;
 	text-align:center;
 }
 
 .doge-phrase {
 	position: fixed;
-	font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+	font-family: 'Comic Sans MS', cursive;
 	z-index: -1;
 }
 
