@@ -173,6 +173,11 @@ html {
 		width: 100%;
 	}
 
+	#content .img-container {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	#cutout-doge {
 		position: relative;
 		float: left;
