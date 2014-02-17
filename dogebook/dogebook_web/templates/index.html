@@ -3,6 +3,7 @@
 
 
 {% block content %}
+<div class="page-container" id="index">
 <div id="content">
 	{% for doge in dogify_images %}
 	<div class="img-container">
@@ -17,4 +18,5 @@
 	{% endfor %}
 </div>
 <img id="cutout-doge" src="{{STATIC_URL}}imgs/doge-cutout.png" />
+</div>
 {% endblock %}
