@@ -127,4 +127,9 @@ html {
 		width: 100%;
 		left: auto;
 	}
+
+	.button span {
+		font-size: 2em;
+		line-height: 2em;
+	}
 }
