@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="twitter"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "i dogebombed";
+			var socialtext = "very photo, much dogebombed";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendTweet(e, socialtext, imglink);
 			e.stopPropagation()
@@ -41,14 +41,14 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="facebook"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "i dogebombed";
+			var socialtext = "very photo, much dogebombed";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendFbShare(e, socialtext, imglink);
 		});
 
 		$('.ajmint-social-btn[data-type="gplus"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "i dogebombed";
+			var socialtext = "very photo, much dogebombed";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendGplusShare(e, imglink);
 		});
@@ -62,7 +62,7 @@ $(document).ready(function() {
 		// This function only needs e but if you want to pass in special text or a url hash, you can
 		AJMINT.sendTweet = function(e, text, route){
 			var base_url = 'https://twitter.com/intent/tweet?url=' + ((!route) ? window.location.href : ('http://' + window.location.hostname + window.location.pathname + route));
-			text = (text) ? text : 'I got dogebombed';
+			text = (text) ? text : 'very photo, much dogebombed';
 
 			var tweet_text  = "&text=" + text,
 			    via_account = '&via=systemizer @joannaskao',
@@ -70,7 +70,7 @@ $(document).ready(function() {
 			    counter_url = "&counturl=" + window.location.hostname + window.location.pathname;
 
 			var twitter_url = AJMINT.percentEncode(base_url + tweet_text + related + counter_url + via_account);
-			console.log(twitter_url);
+			// console.log(twitter_url);
 
 			var settings = 'width=500,height=300,scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
 
@@ -85,11 +85,11 @@ $(document).ready(function() {
 			var name = "&name=dogebomb: much bomb, very doge",
 			    description = "&description=much bomb, very doge",
 			    redirect    = '&redirect_uri=http://dogebomb.me',
-			    image       = '&picture=http://dogebomb.me/media/socialmedia-promo.png';
+			    image       = '&picture=' + ((!route) ? window.location.href : ('http://' + window.location.hostname + window.location.pathname + route));;
 
 			var facebook_url = base_url + app_id + page_url + name + description + redirect + image;
 			    facebook_url = AJMINT.percentEncode(facebook_url);
-			console.log(facebook_url)
+			// console.log(facebook_url)
 
 			var settings = 'width=900,height=450,scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
 
 			var gplus_url = base_url + page_url;
 			    gplus_url = AJMINT.percentEncode(gplus_url);
-			console.log(gplus_url)
+			// console.log(gplus_url)
 
 			var settings = 'width=600,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no';
 
