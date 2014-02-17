@@ -78,7 +78,7 @@ $(document).ready(function() {
 			}
 
 			AJMINT.sendFbShare = function(e, text, route){
-			var base_url = 'http://www.facebook.com/dialog/feed',
+			var base_url = 'https://www.facebook.com/dialog/feed',
 			    app_id   = '?app_id=1405417853046999',
 			    page_url = '&link=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));
 
