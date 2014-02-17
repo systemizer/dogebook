@@ -5,3 +5,4 @@ dogebook/dogebook/local_settings.py
 myenv
 dogebook/db.sqlite3
 dogebook/dogeimages
+dogebook/media

@@ -40,7 +40,7 @@ def dogify(fb_photos,user):
             background = Image.open(file)
             doge_img_w,doge_img_h=doge_img_copy.size
             bg_w,bg_h=background.size
-            offset=(int((bg_w-doge_img_w)/8 + (bg_w-doge_img_w)/4*3*random.random()),int((bg_h-doge_img_h)/8 + (bg_h-doge_img_h)/4*3*random.random()))
+            offset=(int((bg_w-doge_img_w)/8 + (bg_w-doge_img_w)*random.random()),int((bg_h-doge_img_h)/8 + (bg_h-doge_img_h)*random.random()))
             background.paste(doge_img_copy,offset,doge_img_copy)
 
             imagefile = cStringIO.StringIO()
