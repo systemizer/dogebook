@@ -77,19 +77,17 @@ $(document).ready(function() {
 			window.open(twitter_url, 'Tweet', settings)
 			}
 
-			AJMINT.sendFbShare = function(e, text, route){
-			var base_url = 'http://www.facebook.com/dialog/feed',
-			    app_id   = '?app_id=1405417853046999',
-			    page_url = '&link=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));
+		AJMINT.sendFbShare = function(e, text, route){
+			var base_url = 'http://www.facebook.com/sharer.php?s=100',
+			    page_url = '&p[url]=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));
 
-			var name = "&name=dogebomb: much bomb, very doge",
-			    description = "&description=much bomb, very doge",
-			    redirect    = '&redirect_uri=https://dogebomb.me',
-			    image       = '&picture=' + AJMINT.percentEncode((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));;
+			var name = "&p[title]=dogebomb: much bomb, very doge",
+			    description = "&p[summary]=much bomb, very doge",
+			    image       = '&p[images][0]=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));;
 
-			var facebook_url = base_url + app_id + page_url + name + description + redirect + image;
+			var facebook_url = base_url + page_url + name + description + image;
 			    facebook_url = AJMINT.percentEncode(facebook_url);
-			console.log(facebook_url)
+			// console.log(facebook_url)
 
 			var settings = 'width=900,height=450,scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
 
