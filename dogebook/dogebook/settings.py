@@ -24,7 +24,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["dogebomb.me"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'dogebook_social',
     'dogebook_web',
     'dogebook_imageprocessing',
+    'djcelery'
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -98,6 +99,8 @@ SCOPE = ['user_photos']
 PATH_TO_DOGE=os.path.join(BASE_DIR,"doge.png")
 MEDIA_URL="/media/"
 MEDIA_ROOT= os.path.join(BASE_DIR,"media")
+
+CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
 
 try:
     from .local_settings import *

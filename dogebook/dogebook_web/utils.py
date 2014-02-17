@@ -7,12 +7,16 @@ from django.conf import settings
 from django.core.files.base import ContentFile
 
 from dogebook_web.models import DogeImage
+from dogebook_web.processing_manager import ProcessingManager
+
+manager = ProcessingManager()
 
 def dogify(fb_photos,user):
     '''
     This takes in an array of picture urls, dogifies them, stores
     them somewhere, and returns urls from which they can be accessed
     '''
+    manager.set(user.id,True)
     doge_img = Image.open(settings.PATH_TO_DOGE,'r')
 
     known_images_map = dict([(di.fb_id,di) for di in DogeImage.objects.filter(owner=user)])
@@ -62,4 +66,5 @@ def dogify(fb_photos,user):
         except Exception:
             continue
 
+    manager.set(user.id,None)
     return returned_images
