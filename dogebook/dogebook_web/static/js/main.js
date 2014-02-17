@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="twitter"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "very photo, much dogebomb";
+			var socialtext = "very photo, much doge";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendTweet(e, socialtext, imglink);
 			e.stopPropagation()
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="facebook"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "very photo, much dogebomb";
+			var socialtext = "very photo, much doge";
 			var captiontext = $(this).parent().parent().find('p').text();
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendFbShare(e, socialtext, imglink, captiontext);
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="gplus"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "very photo, much dogebomb";
+			var socialtext = "very photo, much doge";
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendGplusShare(e, imglink);
 		});
@@ -63,7 +63,7 @@ $(document).ready(function() {
 		// This function only needs e but if you want to pass in special text or a url hash, you can
 		AJMINT.sendTweet = function(e, text, route){
 			var base_url = 'https://twitter.com/intent/tweet?url=' + ((!route) ? window.location.href : ('https://' + window.location.hostname + window.location.pathname + route));
-			text = (text) ? text : 'very photo, much dogebomb';
+			text = (text) ? text : 'very photo, much doge';
 
 			var tweet_text  = "&text=" + text,
 			    via_account = '&via=systemizer @joannaskao',
