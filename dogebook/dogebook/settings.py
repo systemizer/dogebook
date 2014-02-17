@@ -103,9 +103,7 @@ MEDIA_URL="/media/"
 MEDIA_ROOT= os.path.join(BASE_DIR,"media")
 CELERY_IGNORE_RESULT = True
 
-if DEBUG:
-    CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
-    BROKER_TRANSPORT = "djkombu.transport.DatabaseTransport"
+
 
 LOGGING = {
     'version': 1,
@@ -154,3 +152,7 @@ except ImportError:
     print "Failed to find local settings file. Please Try AGain and create a local_settings.py file with Creds"
     import sys
     sys.exit(1)
+
+if DEBUG:
+    CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+    BROKER_TRANSPORT = "djkombu.transport.DatabaseTransport"
