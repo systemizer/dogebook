@@ -21,7 +21,6 @@ body {
 
 .page-container {
   width:100%;
-  height:100%;
 }
 
 #splash {
@@ -137,6 +136,30 @@ html {
 	color: #FF00FF;
 }
 
+#doge-loading-container {
+	position: relative;
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#doge-loading-container h1 {
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	color: yellow;
+}
+
+#doge-loading {
+	width: 100%;
+}
+
+.doge-phrase.loading {
+	color: #555 !important;
+}
+
+
 @media (max-width: 620px) {
 	#header {
 		background: #1b1b1b;
@@ -160,5 +183,9 @@ html {
 	.button span {
 		font-size: 2em;
 		line-height: 2em;
+	}
+
+	#doge-loading-container {
+		margin-top: 100px;
 	}
 }
