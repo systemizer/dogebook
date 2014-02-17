@@ -171,22 +171,32 @@ html {
 
 .footer {
 	position: fixed;
-	bottom: 30px;
+	bottom: 15px;
 	left: 30px;
 }
 
 .footer.splash {
 	position: fixed;
-	bottom: 30px;
+	bottom: 15px;
 	right: 30px;
+	left: auto;
 }
 
 .footer .button {
 	float: left;
 	margin: 0 auto;
-	width: 100%;
+	width: auto;
+	text-align: left;
+	margin: 3em 0 1.3em 0;
+	color: black;
+}
+
+.footer.splash .button {
+	float: right;
+	margin: 0 auto;
+	width: auto;
 	text-align: right;
-	margin: 3em 0 0 0;
+	margin: 3em 0 1.3em 0;
 	color: black;
 }
 
@@ -200,6 +210,23 @@ html {
 
 .footer .button span:hover {
     background:#4D4DFF;
+}
+
+.footer .madeby {
+	font-size: 0.8em;
+	line-height: 1em;
+	margin-top: 1em;
+	color: #FF4105;
+	clear: both;
+}
+
+.footer .madeby a {
+	color: #FF4105;
+	text-decoration: none;
+}
+
+.footer .madeby a:hover {
+	text-decoration: underline;
 }
 
 
@@ -246,16 +273,29 @@ html {
 		right: auto;
 	}
 
+	.footer.splash,
 	.footer {
 		position: relative;
 		bottom: auto;
 		right: auto;
 		left: auto;
 		width: 100%;
+		float: left;
 	}
 
+	.footer.splash .button,
 	.footer .button {
 		text-align: center;
-		margin-bottom: 3em;
+		margin-bottom: 2em;
+		width: 100%;
+	}
+
+	.footer.splash .madeby,
+	.footer .madeby {
+		margin-bottom: 1em;
+		text-align: center;
+		width: 100%;
+		padding: 0 20px;
+		line-height: 1.3em;
 	}
 }
