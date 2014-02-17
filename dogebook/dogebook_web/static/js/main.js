@@ -4,7 +4,8 @@ $(document).ready(function() {
 			'many robe', 'much infinity', 'so gif',
 			'very guitar', 'such fall', 'so trick', 'much feels',
 			'many happy', 'very art', 'amaze', 'wow', 'excite',
-			'much joanna', 'such rob'],
+			'much joanna', 'such rob', 'much smile', 'very frown',
+			'so hair'],
     doge_colors = ['#6FFF00','#FF00FF', '#FFFF00','#4D4DFF',
 		   '#FE0001','#FF4105','#993CF3'],
     body$ = $('body'),
@@ -13,8 +14,8 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
 	// $('.doge-phrase').remove();
-	var doge_phrase = doge_phrases[Math.floor(Math.random() * 17)];
-	var doge_color = doge_colors[Math.floor(Math.random() * 7)];
+	var doge_phrase = doge_phrases[Math.floor(Math.random() * doge_phrases.length)];
+	var doge_color = doge_colors[Math.floor(Math.random() * doge_colors.length)];
 	var top_percentage = Math.floor(Math.random()*100) + 1;
 	var left_percentage = Math.floor(Math.random()*100) + 1;
 	var font_size = Math.random()*1.5;
