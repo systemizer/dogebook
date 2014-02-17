@@ -11,6 +11,10 @@ from dogebook_web.processing_manager import ProcessingManager
 
 manager = ProcessingManager()
 
+
+def _random_hash(length):
+    return os.urandom(length).encode('hex')
+
 def dogify(fb_photos,user):
     '''
     This takes in an array of picture urls, dogifies them, stores
@@ -57,7 +61,7 @@ def dogify(fb_photos,user):
             doge_image = DogeImage(fb_id=photo['id'],owner=user,comment=comment)
             doge_image.save()
             doge_image.image.save(
-                os.path.basename(url),
+                _random_hash(32),
                 ContentFile(imagefile.getvalue()),
                 save=True
             )
