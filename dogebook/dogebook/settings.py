@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'djcelery',
     'djkombu',
     'gunicorn',
+    'south'
 )
 
 AUTHENTICATION_BACKENDS = (
