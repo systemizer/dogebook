@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'dogebook_web',
     'dogebook_imageprocessing',
     'djcelery',
-    'djkombu'
+    'djkombu',
+    'gunicorn',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -105,6 +106,47 @@ CELERY_IGNORE_RESULT = True
 if DEBUG:
     CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
     BROKER_TRANSPORT = "djkombu.transport.DatabaseTransport"
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'filters': [],
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['null'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    }
+}
 
 try:
     from .local_settings import *
