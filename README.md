@@ -1,3 +1,4 @@
+[![alt text](https://raw.github.com/systemizer/dogebook/master/dogebook/dogebook_web/static/imgs/cover-image.png "dogebomb")](https://dogebook.me)
 
 dogebook
 ========
