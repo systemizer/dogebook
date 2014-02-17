@@ -32,7 +32,8 @@ $(document).ready(function() {
 
 		$('.ajmint-social-btn[data-type="twitter"]').click(function(e){
 			var imglink = $(this).parent().parent().find('img').attr('src'); // get link to image
-			var socialtext = "dogebomb: very photo, much doge";
+			var captiontext = $(this).parent().parent().find('p').text();
+			var socialtext = "#dogebomb: " + captiontext;
 			imglink = imglink.replace(/^\//, ""); // strip out first slash
 			AJMINT.sendTweet(e, socialtext, imglink);
 			e.stopPropagation()
