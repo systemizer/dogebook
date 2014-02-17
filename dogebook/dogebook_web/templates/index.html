@@ -8,6 +8,11 @@
 	<div class="img-container">
 	  <img src="{% if doge.image %}{{doge.image.url}}{% endif %}" />
 	  <p>{{doge.comment|dogify_comment}}</p>
+	  <div class="social">
+	  	<span data-type="facebook" class="ajmint-social-btn"><span class="ajmint-icon-facebook"></span></span>
+	  	<span data-type="twitter" class="ajmint-social-btn"><span class="ajmint-icon-twitter"></span></span>
+	  	<span data-type="gplus" class="ajmint-social-btn"><span class="ajmint-icon-gplus"></span></span>
+	  </div>
 	</div>
 	{% endfor %}
 </div>
