@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'dogebook_social',
     'dogebook_web',
     'dogebook_imageprocessing',
-    'djcelery'
+    'djcelery',
+    'djkombu'
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -101,6 +102,8 @@ MEDIA_URL="/media/"
 MEDIA_ROOT= os.path.join(BASE_DIR,"media")
 
 CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERY_IGNORE_RESULT = True
+BROKER_TRANSPORT = "djkombu.transport.DatabaseTransport"
 
 try:
     from .local_settings import *
