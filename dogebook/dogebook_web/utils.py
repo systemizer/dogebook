@@ -61,7 +61,7 @@ def dogify(fb_photos,user):
             doge_image = DogeImage(fb_id=photo['id'],owner=user,comment=comment)
             doge_image.save()
             doge_image.image.save(
-                _random_hash(32)+".png",
+                _random_hash(16)+".png",
                 ContentFile(imagefile.getvalue()),
                 save=True
             )
