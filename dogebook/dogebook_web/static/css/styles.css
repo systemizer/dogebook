@@ -19,18 +19,22 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	float: left;
-
-	height:100%;
+	min-height:100%;
 }
 
 .page-container {
   width:100%;
 }
 
+
 #to-the-moon {
-  float:right;
+	float: right;
+	width: 100%;
+	max-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 html {
@@ -39,6 +43,7 @@ html {
 
 * {
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	font-family: 'Comic Sans MS', 'comic', sans-serif;
 }
 
@@ -138,6 +143,7 @@ html {
 	padding: 0 30px;
 	float: right;
 	color: #FF00FF;
+	width: 100%;
 }
 
 #doge-loading-container {
