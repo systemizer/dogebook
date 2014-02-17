@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load dogify %}
+
+
+{% block content %}
+<div id="intro-text">
+	<!-- <p>very doge bomb. so facebook. amaze.</p> -->
+	<a href="/login/facebook"><span class="button">
+		<span>so connect. very facebook</span>
+	</span></a>
+</div>
+<img id="cutout-doge" src="{{STATIC_URL}}imgs/doge-cutout.png" />
+{% endblock %}

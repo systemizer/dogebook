@@ -23,6 +23,28 @@ html {
 
 * {
 	box-sizing: border-box;
+	font-family: 'Comic Sans MS', cursive;
+}
+
+.button {
+	float: left;
+	margin: 0 auto;
+	width: 100%;
+	text-align: right;
+	margin: 3em 0 0 0;
+	color: black;
+}
+
+.button span {
+	background: #FF4105;
+    font-size:3.2em;
+    padding:10px;
+    line-height:1.4em;
+    cursor:pointer;
+}
+
+.button span:hover {
+    background:#FE0001;
 }
 
 #header {
@@ -32,7 +54,6 @@ html {
 }
 
 #header h1 {
-	font-family: 'Comic Sans MS', cursive;
 	font-size: 2em;
 	color: #FE0001;
 	background: #1b1b1b;
@@ -64,14 +85,12 @@ html {
 }
 
 #content .img-container p {
-	font-family: 'Comic Sans MS', cursive;
-        color:#FFF;
+    color:#FFF;
 	text-align:center;
 }
 
 .doge-phrase {
 	position: fixed;
-	font-family: 'Comic Sans MS', cursive;
 	z-index: -1;
 }
 
@@ -81,6 +100,12 @@ html {
 	left: 10px;
 	width: 45%;
 	z-index: -1;
+}
+
+#intro-text {
+	padding: 0 30px;
+	float: right;
+	color: #FF00FF;
 }
 
 @media (max-width: 620px) {

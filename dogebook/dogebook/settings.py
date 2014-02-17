@@ -90,7 +90,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL="/login/facebook/"
+LOGIN_URL="/splash"
 
 FACEBOOK_EXTENDED_PERMISSIONS = ['user_photos']
 SCOPE = ['user_photos']

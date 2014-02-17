@@ -15,3 +15,7 @@ def index(request):
     return render_to_response("index.html",
                               {'dogify_images':dogify_images},
                               RequestContext(request))
+
+
+def splash(request):
+	return render_to_response("splash.html", {}, RequestContext(request))
