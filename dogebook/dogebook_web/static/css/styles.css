@@ -203,4 +203,13 @@ html {
 	#doge-loading-container {
 		margin-top: 100px;
 	}
+
+	#content .img-container .social {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 0.8em;
+		bottom: auto;
+		right: auto;
+	}
 }
